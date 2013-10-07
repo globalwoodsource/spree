@@ -1,6 +1,7 @@
 Spree::Core::Engine.routes.draw do
 
   root :to => 'home#index'
+  get '/contact', :to => 'home#contact'
 
   resources :products
 

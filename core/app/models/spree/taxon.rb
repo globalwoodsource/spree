@@ -11,8 +11,8 @@ module Spree
     validates :name, presence: true
 
     has_attached_file :icon,
-      styles: { mini: '32x32>', normal: '128x128>' },
-      default_style: :mini,
+      styles: { mini: '32x32>', normal: '100x100>' },
+      default_style: :normal,
       url: '/spree/taxons/:id/:style/:basename.:extension',
       path: ':rails_root/public/spree/taxons/:id/:style/:basename.:extension',
       default_url: '/assets/default_taxon.png'

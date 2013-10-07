@@ -8,14 +8,16 @@
     <%= render :partial => 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
-
-    <div class="container">
+	
+    <div id="container">
 
       <%= render :partial => 'spree/shared/header' %>
-
+      
       <div id="wrapper" class="row" data-hook>
-
-        <%= breadcrumbs(@taxon) %>
+      	<div id="subnav">
+        	<%= breadcrumbs(@taxon) %>
+        	<%# TODO: Add search bar and link to cart %>
+        </div>
 
         <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
 
@@ -24,13 +26,10 @@
           <%= yield %>
         </div>
 
-        <%= yield :templates %>
-
-      </div>
-
-      <%= render :partial => 'spree/shared/footer' %>
-
+      <%= yield :templates %>
+	  </div>
     </div>
+    <%= render :partial => 'spree/shared/footer' %>
 
     <%= render :partial => 'spree/shared/google_analytics' %>
     <script>

@@ -1,5 +1,11 @@
-<header id="header" class="row" data-hook>
-  <figure id="logo" class="columns six" data-hook><%= logo %></figure>
-  <%= render :partial => 'spree/shared/nav_bar' %>
-  <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
+<header>		
+	<%= link_to image_tag("store/forestheader.png"), '#', id: "top_image" %>
+	<%= image_tag("store/top_bar.jpg", alt: "") %>
+	<ul id="topnav" class="nav">
+	 <li><%= link_to "", root_path, id: "homelink" %></li>
+	 <li><%= link_to "", '/t/species', id: "woodslink" %></li>
+	 <li><%= link_to "", '/products', id: "storelink" %></li>
+	 <li><%= link_to "", '/contact', id: "contactlink" %></li>
+	</ul>
+	<%= image_tag("store/bottom_bar.png") %>
 </header>

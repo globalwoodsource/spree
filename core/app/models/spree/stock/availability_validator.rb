@@ -17,7 +17,7 @@ module Spree
           display_name = %Q{#{variant.name}}
           display_name += %Q{ (#{variant.options_text})} unless variant.options_text.blank?
 
-          line_item.errors[:quantity] << Spree.t(:out_of_stock, :scope => :order_populator, :item => display_name.inspect)
+          line_item.errors[:quantity] << Spree.t(:out_of_stock, :scope => :order_populator, :quantity => line_item.product.total_on_hand)
         end
       end
     end

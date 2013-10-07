@@ -750,7 +750,7 @@ en:
     order_not_found: We couldn't find your order. Please try that action again.
     order_number: Order
     order_populator:
-      out_of_stock: ! '%{item} is out of stock.'
+      out_of_stock: ! "Sorry, only %{quantity} left in stock."
       please_enter_reasonable_quantity: Please enter a reasonable quantity.
     order_processed_successfully: Your order has been processed successfully
     order_state:
@@ -769,7 +769,7 @@ en:
     order_total: Order Total
     order_updated: Order Updated
     orders: Orders
-    out_of_stock: Out of Stock
+    out_of_stock: Only %{quantity} left
     overview: Overview
     package_from: package from
     pagination:
@@ -817,7 +817,7 @@ en:
     process: Process
     product: Product
     product_details: Product Details
-    product_has_no_description: This product has no description
+    product_has_no_description: 
     product_not_available_in_this_currency: This product is not available in the selected currency.
     product_properties: Product Properties
     product_rule:
@@ -966,7 +966,7 @@ en:
     shipping_method: Shipping Method
     shipping_methods: Shipping Methods
     shipping_price_sack: Price sack
-    shop_by_taxonomy: Shop by %{taxonomy}
+    shop_by_taxonomy: Browse by %{taxonomy}
     shopping_cart: Shopping Cart
     show: Show
     show_active: Show Active

@@ -9,7 +9,6 @@ $title_text_color:          #404042 !default;
 $body_text_color:           #404042 !default;
 $link_text_color:           #00ADEE !default;
 
-$product_background_color:  #FFFFFF !default;
 $product_title_text_color:  #404042 !default;
 $product_body_text_color:   #404042 !default;
 $product_link_text_color:   #BBBBBB !default;
@@ -22,7 +21,7 @@ $product_link_text_color:   #BBBBBB !default;
 /*--------------------------------------*/
 /* Font families
 /*--------------------------------------*/
-$ff_base:       'Ubuntu', sans-serif !default;
+$ff_base:       Helvetica;
 
 /*--------------------------------------
   | Font sizes
@@ -36,7 +35,7 @@ $ff_base:       'Ubuntu', sans-serif !default;
 /*|------------------------------------
   |- Product Listing                         
   |                                  */
-      $product_list_name_font_size:           12px !default;
+      $product_list_name_font_size:           16px !default;
       $product_list_price_font_size:          16px !default;
       $product_list_header_font_size:         20px !default;
       $product_list_search_font_size:         14px !default;
@@ -59,3 +58,17 @@ $ff_base:       'Ubuntu', sans-serif !default;
       $default_border:                        1px solid $border_color !default;
       $button_border_color:                   rgba(0, 138, 189, .75) !default;
       $table_head_color:                      lighten($body_text_color, 60) !default;
+
+/*|------------------------------------
+  |- My variables
+  |                                  */
+      $bg1:     #92a4a2;
+      $bg2:     #5e4e47;
+      $fg:      #776b66;
+      $fgtext:  #dec7bd;
+      $fglink:  #e8f0f3;
+      $shadow:  #333;
+      $foot:    #111;
+      $pg_width:  650px;
+      $product_background_color:  $fg !default;
+      $image_bg: #a9b6be;

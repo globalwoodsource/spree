@@ -1,19 +1,26 @@
-<h1 class="taxon-title"><%= @taxon.name %></h1>
+<% if @taxon.children.empty? %>
+	<div class="species_info fgbox">
+		<div class="species_display">
+			<h2><%= @taxon.name %></h2>
+			<%= image_tag(@taxon.icon, :alt => "")%>
+		</div>
+		<p><%= @taxon.description %></p>
+	</div>
+	
+	<br class="clear">
 
-<% content_for :sidebar do %>
-  <div data-hook="taxon_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-    <%= render :partial => 'spree/shared/filters' if @taxon.children.empty? %>
-  </div>
-<% end %>
+	<div data-hook="taxon_products">
+	  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+	</div>
 
-<div data-hook="taxon_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
-</div>
+<% else %>
+	<h1 class="taxon-title fgbox"><%= @taxon.name %></h1>
+	
+	<% unless params[:keywords].present? %>
+	  <div data-hook="taxon_children">
+	    <%= render :partial => 'taxon', :collection => @taxon.children %>
+	  </div>
+	<% end %>
 
-<% unless params[:keywords].present? %>
-  <div data-hook="taxon_children">
-    <%= render :partial => 'taxon', :collection => @taxon.children %>
-  </div>
 <% end %>
 

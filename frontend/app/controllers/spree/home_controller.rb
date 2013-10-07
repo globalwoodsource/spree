@@ -7,5 +7,9 @@ module Spree
       @searcher = build_searcher(params)
       @products = @searcher.retrieve_products
     end
+    
+    def contact
+    end
+    
   end
 end
